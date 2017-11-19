@@ -23,7 +23,7 @@
 \definecolor{black}{HTML}{000000}
 \definecolor{sidecolor}{HTML}{E7E7E7}
 \definecolor{maincolor}{HTML}{245FA6}
-\definecolor{grey}{HTML}{484848}
+\definecolor{grey}{HTML}{333333}
 \definecolor{lightgrey}{HTML}{8F8F8F}
 \definecolor{maingrey}{HTML}{8A8A8A}
 \colorlet{asidecolor}{sidecolor}
@@ -117,13 +117,19 @@
 	\renewcommand{\giventwitter}{\textsc{\wbflag{\faTwitter}} \href{#1}{https://twitter.com} \\}
 }
 
+% -- settings: about me -- (old in side bar)
+%\newcommand{\about}[1]{\renewcommand{\givenabout}{
+%	\vspace{0.5cm} 
+%	\section{About me}\justifying #1}}
+%\newcommand{\givenabout}{}
 
-% -- settings: about me --
-\newcommand{\about}[1]{\renewcommand{\givenabout}{
-	\vspace{0.5cm} 
-	\section{About me}\justifying #1}}
-\newcommand{\givenabout}{}
+\newcommand{\about}[1]{ 
+	\section{About me}
+	\vspace{5mm} \hspace{3mm} \parbox{12.8cm}{
+	\noindent \color{grey} \justifying #1}
+}
 
+	
 % -- settings: languages --
 \newcommand{\languages}[1]{
 	\renewcommand{\givenlanguages}{
@@ -266,7 +272,7 @@
 	\givengithub
 	\giventwitter
 
-	\givenabout
+%	\givenabout
 	
 	\givenlanguages
 	
